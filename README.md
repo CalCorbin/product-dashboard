@@ -2,6 +2,9 @@
 
 This repo houses the product dashboard for viewing products based on their performance.
 
+## Initial setup
+1. Create an `.env` file with value `PORT=3000`.
+
 ## Running the backend
 
 ## Running the frontend

@@ -1,0 +1,78 @@
+{
+ "products": {
+  "data": {
+   "items": [
+    {
+     "id": "BBS001",
+     "name": "Lycos Corn Flakes",
+     "price": "5.25",
+     "totalreviews": "40",
+     "Rating": "5.0"
+    },
+    {
+     "id": "BBS002",
+     "name": "Locos Energy Bar",
+     "price": "2.30",
+     "totalreviews": "35",
+     "Rating": "3.25"
+    },
+    {
+     "id": "BBS003",
+     "name": "Jim Jam Magic Wand",
+     "price": "25.00",
+     "totalreviews": "20",
+     "Rating": "4.5"
+    },
+    {
+     "id": "BBS004",
+     "name": "Jimmy's Sour Jelly Beans",
+     "price": "7.89",
+     "totalreviews": "10",
+     "Rating": "4.9"
+    },
+    {
+     "id": "BBS005",
+     "name": "Silly Billy Potato Chips",
+     "price": "4.49",
+     "totalreviews": "5",
+     "Rating": "2.0"
+    },
+    {
+     "id": "BBS006",
+     "name": "Bam Bam's Steak Seasoning",
+     "price": "7.25",
+     "totalreviews": "33",
+     "Rating": "4.8"
+    },
+    {
+     "id": "BBS007",
+     "name": "Himliy's Himalayan Pink Salt",
+     "price": "10.30",
+     "totalreviews": "19",
+     "Rating": "3.6"
+    },
+    {
+     "id": "BBS008",
+     "name": "Boogie Woogie Silly Strings",
+     "price": "6.99",
+     "totalreviews": "22",
+     "Rating": "3.3"
+    },
+    {
+     "id": "BBS009",
+     "name": "Betty's Beer Batter",
+     "price": "8.59",
+     "totalreviews": "34",
+     "Rating": "4.7"
+    },
+    {
+     "id": "BBS0010",
+     "name": "Slim Spicy Jerky",
+     "price": "17.99",
+     "totalreviews": "27",
+     "Rating": "3.4"
+    }
+   ]
+  }
+ }
+}
