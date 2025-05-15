@@ -1,0 +1,96 @@
+.carouselContainer {
+    width: 100%;
+    max-width: 75rem;
+    margin: 0 auto;
+    padding: 1.5rem 0;
+}
+
+.carouselTitle {
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin-bottom: 1.25rem;
+    color: #333;
+}
+
+.carouselControls {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.carouselTrack {
+    display: flex;
+    gap: 1rem;
+    transition: transform 0.4s ease;
+    overflow: hidden;
+    width: 100%;
+}
+
+.carouselItem {
+    flex: 0 0 calc(25% - 0.75rem);
+    min-width: 0;
+}
+
+.navButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background-color: white;
+    border: 1px solid #e5e7eb;
+    color: #333;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    z-index: 2;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navButton:hover:not(:disabled) {
+    background-color: #f3f4f6;
+    transform: scale(1.05);
+}
+
+.navButton:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+    gap: 0.5rem;
+}
+
+.paginationDot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #d1d5db;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.activeDot {
+    background-color: #4b5563;
+    transform: scale(1.2);
+}
+
+.loading, .error, .empty {
+    width: 100%;
+    padding: 2rem;
+    text-align: center;
+    font-size: 1rem;
+    color: #6b7280;
+    background-color: #f9fafb;
+    border-radius: 0.5rem;
+}
+
+.error {
+    color: #ef4444;
+    background-color: #fee2e2;
+}
