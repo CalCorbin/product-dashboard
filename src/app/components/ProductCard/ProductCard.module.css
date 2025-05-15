@@ -1,8 +1,8 @@
 .productCard {
     display: flex;
     flex-direction: column;
-    width: 300px;
-    border-radius: 16px;
+    width: 15rem;
+    border-radius: 1rem;
     overflow: hidden;
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -20,11 +20,10 @@
 
 .productCard:focus-visible {
     outline: 2px solid #4f46e5;
-    outline-offset: 2px;
 }
 
 .productImageContainer {
-    height: 200px;
+    height: 12.5rem;
     width: 100%;
     overflow: hidden;
 }
@@ -41,25 +40,28 @@
 }
 
 .productInfo {
-    padding: 20px;
+    padding: 1.25rem;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 0.5rem;
 }
 
 .productName {
     margin: 0;
-    font-size: 17px;
+    font-size: 1rem;
     font-weight: 600;
     color: #111827;
     line-height: 1.4;
     letter-spacing: -0.01em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .productPrice {
     margin: 0;
     font-weight: 700;
-    font-size: 20px;
+    font-size: 1.25rem;
     color: #4f46e5;
     letter-spacing: -0.02em;
 }
@@ -67,8 +69,8 @@
 .productRating {
     display: flex;
     align-items: center;
-    gap: 8px;
-    margin-top: 6px;
+    gap: 0.5rem;
+    margin-top: 0.375rem;
 }
 
 .stars {
@@ -77,14 +79,14 @@
 
 .starFull {
     color: #facc15;
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 1;
 }
 
 .starHalf {
     position: relative;
     display: inline-block;
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 1;
 }
 
@@ -106,18 +108,18 @@
 
 .starEmpty {
     color: #e5e7eb;
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 1;
 }
 
 .ratingValue {
     font-weight: 600;
-    font-size: 14px;
+    font-size: 1rem;
     color: #111827;
 }
 
 .reviewCount {
-    font-size: 13px;
+    font-size: 0.75rem;
     color: #6b7280;
     font-weight: 450;
 }

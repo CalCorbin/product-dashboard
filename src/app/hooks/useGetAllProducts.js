@@ -31,7 +31,7 @@ function useGetAllProducts(options = {}, queryOptions = {}) {
       }
 
       const queryString = params.toString();
-      const url = `/api/products${queryString ? `?${queryString}` : ''}`;
+      const url = `http://localhost:3000/api/products${queryString ? `?${queryString}` : ''}`;
 
       const response = await fetch(url);
 
