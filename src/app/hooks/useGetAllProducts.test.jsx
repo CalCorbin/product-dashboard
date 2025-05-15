@@ -1,4 +1,9 @@
+/**
+ * @jest-environment jsdom
+ */
+
 import React from 'react';
+import { jest } from '@jest/globals';
 import { renderHook, waitFor } from '@testing-library/react';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import useGetAllProducts from './useGetAllProducts';
