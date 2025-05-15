@@ -21,7 +21,7 @@ export default defineConfig([
       '**/tests/**/*.{js,mjs,cjs,jsx}',
     ],
     languageOptions: {
-      globals: { ...globals.jest },
+      globals: { ...globals.jest, ...globals.node, ...globals.browser },
     },
   },
   pluginReact.configs.flat.recommended,

@@ -10,6 +10,7 @@
     "build": "next build",
     "start": "next start",
     "api": "node --env-file=.env --watch src/api/index.js",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --coverage",
     "test:be": "node --experimental-vm-modules node_modules/jest/bin/jest.js src/api --coverage",
     "test:ci": "npm run lint && npm run test:be"
   },
