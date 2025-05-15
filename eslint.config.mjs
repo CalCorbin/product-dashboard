@@ -6,7 +6,6 @@ import { dirname } from 'path';
 import { fileURLToPath } from 'url';
 import { FlatCompat } from '@eslint/eslintrc';
 
-// Setup for FlatCompat
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 const compat = new FlatCompat({
@@ -35,5 +34,5 @@ export default defineConfig([
     },
   },
   pluginReact.configs.flat.recommended,
-  ...compat.extends('next/core-web-vitals'), // Add Next.js core-web-vitals config
+  ...compat.extends('next/core-web-vitals'),
 ]);
