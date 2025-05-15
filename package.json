@@ -10,9 +10,11 @@
     "start": "next start",
     "lint": "eslint .",
     "api": "node --env-file=.env --watch src/api/index.js",
+    "cypress": "cypress open",
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --coverage",
     "test:be": "node --experimental-vm-modules node_modules/jest/bin/jest.js src/api --coverage",
-    "test:ci": "npm run lint && npm run test:be"
+    "test:fe": "cypress run --component",
+    "test:ci": "npm run lint && npm run test:be && npm run test:fe"
   },
   "repository": {
     "type": "git",
@@ -26,6 +28,7 @@
   "homepage": "https://github.com/CalCorbin/product-dashboard#readme",
   "dependencies": {
     "@tanstack/react-query": "^5.76.1",
+    "@testing-library/react": "^16.3.0",
     "cors": "^2.8.5",
     "express": "^5.1.0",
     "morgan": "^1.10.0",
@@ -34,8 +37,11 @@
     "react-dom": "^19.1.0"
   },
   "devDependencies": {
+    "@babel/preset-env": "^7.27.2",
+    "@babel/preset-react": "^7.27.1",
     "@eslint/eslintrc": "^3.3.1",
     "@eslint/js": "^9.26.0",
+    "babel-jest": "^29.7.0",
     "cypress": "^14.3.3",
     "eslint": "^9.26.0",
     "eslint-config-next": "^15.3.2",

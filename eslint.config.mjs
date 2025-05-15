@@ -13,7 +13,15 @@ const compat = new FlatCompat({
 });
 
 export default defineConfig([
-  { ignores: ['./coverage/**'] },
+  {
+    ignores: [
+      './coverage/**',
+      './dist/**',
+      './node_modules/**',
+      './test/**',
+      './.next/**',
+    ],
+  },
   {
     files: ['**/*.{js,mjs,cjs,jsx}'],
     plugins: { js },
@@ -31,6 +39,20 @@ export default defineConfig([
     ],
     languageOptions: {
       globals: { ...globals.jest, ...globals.node, ...globals.browser },
+    },
+  },
+  {
+    files: ['**/*.cy.{js,jsx}'],
+    languageOptions: {
+      globals: {
+        ...globals.browser,
+        cy: 'readonly',
+        describe: 'readonly',
+        it: 'readonly',
+        expect: 'readonly',
+        beforeEach: 'readonly',
+        afterEach: 'readonly',
+      },
     },
   },
   pluginReact.configs.flat.recommended,
