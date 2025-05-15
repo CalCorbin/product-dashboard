@@ -1,1 +1,5 @@
-export default { transform: {} };
+export default {
+  transform: {},
+  testEnvironment: 'node',
+  injectGlobals: true,
+};
