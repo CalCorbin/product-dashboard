@@ -1,6 +1,7 @@
 .carouselContainer {
     width: 100%;
     max-width: 75rem;
+    height: 28.75rem;
     margin: 1rem auto;
     padding: 1.5rem;
     border: 1px solid rgba(255, 255, 255, 0.15);
@@ -86,7 +87,7 @@
     transform: scale(1.2);
 }
 
-.loading, .error, .empty {
+.error, .empty {
     width: 100%;
     padding: 2rem;
     text-align: center;

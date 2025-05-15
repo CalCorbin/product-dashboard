@@ -38,7 +38,7 @@ describe('<ProductCarousel />', () => {
       </QueryClientProvider>
     );
 
-    cy.contains('Loading products...').should('be.visible');
+    cy.contains('Loading...').should('be.visible');
   });
 
   it('should render error state', () => {
@@ -52,8 +52,9 @@ describe('<ProductCarousel />', () => {
       </QueryClientProvider>
     );
 
-    cy.contains('Error loading products: Failed to fetch products', {
+    cy.contains('Failed to Load Products', {
       timeout: 10000,
     }).should('be.visible');
+    cy.contains('Failed to fetch products').should('be.visible');
   });
 });
