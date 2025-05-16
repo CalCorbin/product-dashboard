@@ -1,3 +1,4 @@
+'use client';
 import React from 'react';
 import styles from './ProductCard.module.css';
 
@@ -16,7 +17,7 @@ const ProductCard = ({ id, name, price, reviewCount, rating }) => {
       <div className={styles.productImageContainer}>
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src={'https://picsum.photos/200'}
+          src="https://picsum.photos/200"
           alt={`Product: ${name}`}
           className={styles.productImage}
         />
