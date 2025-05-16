@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React, { useState } from 'react';
 import useGetAllProducts from '../../hooks/useGetAllProducts';
 import ProductCard from '../ProductCard/ProductCard';
 import LoadingSpinner from '@/app/components/LoadingSpinner/LoadingSpinner.jsx';
@@ -14,19 +14,29 @@ const ProductCarousel = ({ title, queryParams = {} }) => {
     error,
   } = useGetAllProducts(queryParams);
 
-  const [currentIndex, setCurrentIndex] = React.useState(0);
+  const [currentIndex, setCurrentIndex] = useState(0);
   const productsPerView = 4;
 
-  const nextSlide = () => {
+  const nextItem = () => {
     if (products && currentIndex < products.length - productsPerView) {
       setCurrentIndex(currentIndex + 1);
     }
   };
 
-  const prevSlide = () => {
+  const prevItem = () => {
     if (currentIndex > 0) {
       setCurrentIndex(currentIndex - 1);
     }
+  };
+
+  /**
+   * Function for calculating the translation value for css based on current index.
+   * This helps ensure a smooth transition when navigating the carousel.
+   * @returns {`translateX(-${number}%)`}
+   */
+  const getTranslateValue = () => {
+    const itemWidth = 100 / productsPerView;
+    return `translateX(-${currentIndex * itemWidth}%)`;
   };
 
   return (
@@ -40,17 +50,18 @@ const ProductCarousel = ({ title, queryParams = {} }) => {
         <>
           <div className={styles.carouselControls}>
             <button
-              onClick={prevSlide}
+              onClick={prevItem}
               className={styles.navButton}
               disabled={currentIndex === 0}
             >
               &lt;
             </button>
-
-            <div className={styles.carouselTrack}>
-              {products
-                .slice(currentIndex, currentIndex + productsPerView)
-                .map((product) => (
+            <div className={styles.carouselWindow}>
+              <div
+                className={styles.carouselTrack}
+                style={{ transform: getTranslateValue() }}
+              >
+                {products.map((product) => (
                   <div key={product.id} className={styles.carouselItem}>
                     <ProductCard
                       id={product.id}
@@ -61,27 +72,15 @@ const ProductCarousel = ({ title, queryParams = {} }) => {
                     />
                   </div>
                 ))}
+              </div>
             </div>
-
             <button
-              onClick={nextSlide}
+              onClick={nextItem}
               className={styles.navButton}
               disabled={currentIndex >= products.length - productsPerView}
             >
               &gt;
             </button>
-          </div>
-
-          <div className={styles.pagination}>
-            {Array.from({
-              length: Math.ceil(products.length / productsPerView),
-            }).map((_, i) => (
-              <button
-                key={i}
-                className={`${styles.paginationDot} ${currentIndex / productsPerView === i ? styles.activeDot : ''}`}
-                onClick={() => setCurrentIndex(i * productsPerView)}
-              />
-            ))}
           </div>
         </>
       )}
